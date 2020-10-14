@@ -1,0 +1,3 @@
+class Piece
+    # @position
+end
