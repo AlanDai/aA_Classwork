@@ -1,0 +1,425 @@
+  [1m[35m (177.5ms)[0m  [1m[35mCREATE DATABASE "routes_and_controllers_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (79.5ms)[0m  [1m[35mCREATE DATABASE "routes_and_controllers_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-10-28 14:28:49 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (5.0ms)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-10-28 14:29:41 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 14:32:55 -0700
+
+ActionController::RoutingError - uninitialized constant ApplicationUsersController:
+
+Started GET "/users" for ::1 at 2020-10-28 14:34:13 -0700
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2020-10-28 14:34:54 -0700
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 142ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 14:35:38 -0700
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?fav_food=pizza&admin=true" for ::1 at 2020-10-28 14:36:55 -0700
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizza", "admin"=>"true"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?fav_food=pizza" for ::1 at 2020-10-28 14:38:39 -0700
+
+ActionController::RoutingError - uninitialized constant UserController:
+
+Started POST "/users" for ::1 at 2020-10-28 14:38:59 -0700
+
+ActionController::RoutingError - uninitialized constant UserController:
+
+Started POST "/users" for ::1 at 2020-10-28 14:39:54 -0700
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for ::1 at 2020-10-28 14:41:38 -0700
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2020-10-28 14:44:11 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/2" for ::1 at 2020-10-28 14:44:31 -0700
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-10-28 14:46:44 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-10-28 14:49:33 -0700
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-10-28 14:51:16 -0700
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "users"=>{"fav_food"=>"pizza", "other_food"=>"sushi"}, "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-10-28 14:51:36 -0700
+
+ActionController::BadRequest - Invalid request parameters: expected Hash (got String) for param `fav_food':
+
+Started GET "/users/2" for 127.0.0.1 at 2020-10-28 14:51:57 -0700
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "users"=>{"fav_food"=>"pizza", "other_food"=>"sushi"}, "id"=>"2"}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-10-28 14:52:45 -0700
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "users"=>{"fav_food"=>"pizza", "other_food"=>"sushi", "users"=>{"other_food"=>{"ingredient"=>"cheese"}}}, "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2020-10-28 14:53:02 -0700
+Processing by UsersController#show as */*
+  Parameters: {"fav_food"=>"pizza", "users"=>{"fav_food"=>"pizza", "other_food"=>"sushi", "users"=>{"other_food"=>{"ingredient"=>"cheese"}}}, "something_else"=>"ahhhh", "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (51.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3105287571145122930)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20201028215418)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (10.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying NOT NULL, "email" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201028215418_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201028215418"]]
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (2.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-10-28 21:55:30.982080"], ["updated_at", "2020-10-28 21:55:30.982080"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3105287571145122930)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "alan"], ["email", "alan@aa.io"], ["created_at", "2020-10-28 21:57:07.360133"], ["updated_at", "2020-10-28 21:57:07.360133"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "izzi"], ["email", "izzi@aa.io"], ["created_at", "2020-10-28 21:57:43.533481"], ["updated_at", "2020-10-28 21:57:43.533481"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/users" for 127.0.0.1 at 2020-10-28 15:00:14 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 34ms (Views: 10.5ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-10-28 15:00:33 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2020-10-28 15:01:34 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+Completed 200 OK in 22ms (Views: 1.0ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-10-28 15:04:05 -0700
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"walker", "email"=>"walker@aa.io"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users" for 127.0.0.1 at 2020-10-28 15:04:58 -0700
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"walker", "email"=>"walker@aa.io"}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: users:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users" for 127.0.0.1 at 2020-10-28 15:05:58 -0700
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"walker", "email"=>"walker@aa.io"}
+Completed 400 Bad Request in 3ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users" for 127.0.0.1 at 2020-10-28 15:06:26 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/Izzi/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"walker", "email"=>"walker@aa.io"}
+Completed 400 Bad Request in 6ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users?name=walker&email=walker@aa.io" for 127.0.0.1 at 2020-10-28 15:11:13 -0700
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"walker", "email"=>"walker@aa.io"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:10:in `create'
+
+Started POST "/users?name=walker&email=walker@aa.io" for 127.0.0.1 at 2020-10-28 15:13:27 -0700
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"walker", "email"=>"walker@aa.io"}
+Started POST "/users?user[name]=walker&user[email]=walker@aa.io" for 127.0.0.1 at 2020-10-28 15:15:13 -0700
+Completed 400 Bad Request in 106172ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: user:
+  app/controllers/users_controller.rb:11:in `create'
+
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"walker", "email"=>"walker@aa.io"}}
+Unpermitted parameters: :name, :email
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+Completed 422 Unprocessable Entity in 10021ms (ActiveRecord: 13.7ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Name can't be blank, Email can't be blank:
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/users?user[name]=walker&user[email]=walker@aa.io" for 127.0.0.1 at 2020-10-28 15:15:57 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"walker", "email"=>"walker@aa.io"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "walker"], ["email", "walker@aa.io"], ["created_at", "2020-10-28 22:16:01.988120"], ["updated_at", "2020-10-28 22:16:01.988120"]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:12
+Completed 200 OK in 4815ms (Views: 0.4ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-10-28 15:16:54 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 20ms (Views: 8.4ms | ActiveRecord: 9.4ms)
+
+
+Started POST "/users" for ::1 at 2020-10-28 15:19:15 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>{"\n"=>"vanessa"}}}
+Unpermitted parameter: :name
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (4.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 422 Unprocessable Entity in 27ms (ActiveRecord: 5.5ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Name can't be blank, Email can't be blank:
+  app/controllers/users_controller.rb:11:in `create'
+
+Started POST "/users" for ::1 at 2020-10-28 15:20:00 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>{"\n"=>"vanessa"}}}
+Unpermitted parameter: :name
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (11.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 422 Unprocessable Entity in 84ms (ActiveRecord: 22.0ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Name can't be blank, Email can't be blank:
+  app/controllers/users_controller.rb:11:in `create'
+
+Started POST "/users?user[name]=vanessa" for ::1 at 2020-10-28 15:21:01 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"vanessa"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:11
+Completed 422 Unprocessable Entity in 11ms (ActiveRecord: 2.9ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email can't be blank:
+  app/controllers/users_controller.rb:11:in `create'
+
+Started POST "/users?user[name]=vanessa" for ::1 at 2020-10-28 15:23:01 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"vanessa"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+Completed 422 Unprocessable Entity in 151ms (ActiveRecord: 67.4ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email can't be blank:
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/users?user[name]=vanessa" for ::1 at 2020-10-28 15:23:46 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"vanessa"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+Completed 422 Unprocessable Entity in 31ms (Views: 0.5ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/users?user[name]=vanessa" for ::1 at 2020-10-28 15:24:06 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"vanessa"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+Completed 422 Unprocessable Entity in 37ms (ActiveRecord: 7.9ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Email can't be blank:
+  app/controllers/users_controller.rb:12:in `create'
+
+Started POST "/users?user[name]=vanessa" for ::1 at 2020-10-28 15:24:15 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"vanessa"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:12
+Completed 422 Unprocessable Entity in 29ms (Views: 0.4ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/users/5" for ::1 at 2020-10-28 15:26:22 -0700
+Processing by UsersController#show as */*
+  Parameters: {"user"=>{"name"=>{"\n"=>"vanessa"}}, "id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21
+Completed 200 OK in 29ms (Views: 1.4ms | ActiveRecord: 6.5ms)
+
+
+Started PATCH "/users/3?user[name]=sam" for ::1 at 2020-10-28 15:35:47 -0700
+Processing by UsersController#update as */*
+  Parameters: {"user"=>{"name"=>"sam"}, "id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "sam"], ["updated_at", "2020-10-28 22:35:47.708837"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 200 OK in 49ms (Views: 0.9ms | ActiveRecord: 31.2ms)
+
+
+Started DELETE "/users/3" for ::1 at 2020-10-28 15:36:16 -0700
+Processing by UsersController#destroy as */*
+  Parameters: {"user"=>{"name"=>{"\n"=>"vanessa"}}, "id"=>"3"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:35
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:36
+  [1m[36mUser Destroy (2.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:36
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:36
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users" for ::1 at 2020-10-28 15:36:26 -0700
+Processing by UsersController#index as */*
+  Parameters: {"user"=>{"name"=>{"\n"=>"vanessa"}}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 6.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3105287571145122930)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to EditUsers (20201028230629)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (9.9ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "name"[0m
+  ↳ db/migrate/20201028230629_edit_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" DROP COLUMN "email"[0m
+  ↳ db/migrate/20201028230629_edit_users.rb:4
+  [1m[35m (17.8ms)[0m  [1m[35mALTER TABLE "users" ADD "username" character varying NOT NULL[0m
+  ↳ db/migrate/20201028230629_edit_users.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3105287571145122930)[0m
+  ↳ bin/rails:9
