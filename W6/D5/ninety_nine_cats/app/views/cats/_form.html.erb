@@ -1,0 +1,44 @@
+<% if type="edit" %>
+    <% action_url = cat_url(cat)%>
+    <% button_text = "Update cat!"%> 
+ <% else %>
+    <% button_text = "Create cat!" %>
+    <% action_url = cats_url %>
+<% end %>
+
+<form action=<%=action_url%> method="POST">
+    <% if type == 'edit' %>
+        <input type="hidden" name='_method' value='PATCH'>
+    <% end %>
+    <label>Name: 
+        <input type="text" name="cat[name]" value=<%= cat.name %>>
+    </label>
+    <label>Birth Date:
+        <input type="date" name="cat[birth_date]">
+    </label>
+    <label>Color: 
+        <select name="cat[color]">
+            <option hidden selected disabled>--SELECT ONE--</option>
+            <option value="Black">Black</option>
+            <option value="Brown">Brown</option>
+            <option value="Orange">Orange</option>
+            <option value="White">White</option>
+            <option value="Funky">Funky</option>
+        </select>
+    </label>
+    <div>Sex: 
+        <label>
+            <input type="radio" name="cat[sex]" value="M">
+            M
+        </label>
+        <label>
+            <input type="radio" name="cat[sex]" value="F">
+            F
+        </label>
+    </div>
+    <label>Description:
+        <textarea name="cat[desciption]" cols="30" rows="10"></textarea>
+    </label>
+    <input type="submit" value=<% button_text %>>
+</form>
+
