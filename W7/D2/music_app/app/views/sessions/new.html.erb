@@ -1,0 +1,16 @@
+<h3> Music App </h3>
+
+<h1>Sign In </h1>
+<a href="<%= new_user_url%>"></a>
+<form action="<%=-session_url%>" method="POST">
+    <label>Email
+        <input type="text" name="user[email]" value="">
+    </label>
+
+    <label>Password 
+        <input type="password" name="user[password]" value="">
+    </label>
+    
+    <input type="submit" value="Submit">
+
+</form>
