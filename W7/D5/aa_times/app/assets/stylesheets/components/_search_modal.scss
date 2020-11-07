@@ -1,0 +1,75 @@
+#search-modal.expand {
+    display: flex;
+    position: relative;
+    height: 50px;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+}
+
+#search-modal {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    bottom: 0;
+    background-color: white;
+    z-index: 3;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.07);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+    padding: 10px;
+}
+
+.search-inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    li {
+        border: 1px solid $light-gray;
+        margin-right: 10px;
+        border-radius: 3px;
+    }
+
+    input[type="search"] {
+        color: black;
+        width: 600px;
+    }
+
+    input[type="submit"] {
+        color: $gray;
+        font-weight: bold;
+        padding: 6px 9px;
+        font-size: 11px;
+    }
+
+    input[type="submit"]:hover {
+        color: white;
+        background-color: $light-gray;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 35px;
+    border-radius: 50%;
+    background-color: $light-gray;
+    width: 9px;
+    height: 12px;
+    text-align: center;
+}
+
+.close:hover {
+    background-color: $gray;
+}
+
+#overlay {
+    position: absolute;
+    background-color: white;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vw;
+    z-index: 1;
+}
