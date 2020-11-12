@@ -1,0 +1,39 @@
+<h2> Show Post </h2>
+
+<div>
+    <header>
+        <h3>
+            <%= @post.title %>
+        </h3>
+         <h5> 
+            <%= @post.url %>
+        </h5>
+    </header>
+    <section>
+        <h4>
+            <%= @post.content %>
+        </h4>
+    </section>
+
+    <%= if is_logged_in? %>
+        <section>
+            <form action="">
+                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                <input type="hidden" name="sub_id" value=<%= @sub.id %> >
+                <input type="hidden" name="parent_id" value= <%= @post.id %>>
+
+                <label> Comment
+                    <input type="text" name="comment_id" value=<%= @comment.id %>>
+                </label>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>     
+    <% end %>
+    
+    
+</div>
+
+<div>
+    Show all comments
+</div>

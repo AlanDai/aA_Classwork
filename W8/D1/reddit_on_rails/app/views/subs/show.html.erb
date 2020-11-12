@@ -1,0 +1,26 @@
+<form action="<%= subs_url %>" method="GET">
+    <input type="submit" value="Home">
+</form>
+
+<h2> Subreddit: <%= @sub.title %></h2>
+<h3> Description: <%= @sub.description %></h3>
+<h4> Moderator Overlord: <%= User.find(@sub.moderator_id).username %></h4>
+
+<% if current_user.id == @sub.moderator_id %>
+    <form action="<%= edit_sub_url %>" method="GET">
+        <input type="submit" value="Edit Sub">
+    </form>
+    <form action="<%= sub_url(@sub) %>" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <input type="hidden" name="_method" value=""DELETE"
+        <input type="submit" value="Delete Sub">
+    </form>
+<% end %>
+
+<% if is_logged_in? %>
+    <form action="<%= new_post_url %>" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+        <input type="hidden" name="sub_id" value=<%= @sub.id %>>
+        <input type="submit" value="Create Post">
+    </form>
+<% end %>

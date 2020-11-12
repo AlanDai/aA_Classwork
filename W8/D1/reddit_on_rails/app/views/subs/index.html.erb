@@ -1,0 +1,11 @@
+<h2> All Subs </h2>
+<form action="<%= new_sub_url %>" method="GET">
+    <input type="submit" value="Create Sub">
+</form>
+
+<% @subs.each do |sub| %>
+    <a href=" <%= sub_url(sub) %>">
+       SubReddit: <%=  sub.title %> | Description: <%= sub.description %>
+    </a>
+    <br>
+<% end %>
