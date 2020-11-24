@@ -16,8 +16,6 @@ class Tabs extends React.Component {
 
         const titles = this.props.arrayOfTabs.map( ele => ele.title )
         const selectedTab = titles.indexOf(e.currentTarget.value)
-        const $selectedTab = $(e.currentTarget)
-        $selectedTab.addClass
         this.setState({ selectedTab });
     }
 
@@ -33,8 +31,8 @@ class Tabs extends React.Component {
 
         return (
             <div>
+                <h1 class="title">SOME TABS</h1>
                 <div class="tabs">
-                    <h1>SOME TABS</h1>
                     <div className="tab-titles">
                         {titles}
                     </div>

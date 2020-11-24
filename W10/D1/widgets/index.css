@@ -1,11 +1,16 @@
+
+.title {
+    text-align: center;
+}
+
 /* clock */
 
 .clock {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 0 auto 0 auto;
     padding: 20px;
+    margin: 0 auto 0 auto;
     width: 600px;
     height: 100px;
     border: 1px solid black;
@@ -27,6 +32,8 @@
 /* tabs */
 
 .tabs {
+    width: 600px;
+    height: 600px;
     margin: 0 auto 0 auto;
 }
 
@@ -37,10 +44,10 @@
 
 .tab-titles button {
     display: table-cell;
-    border: 2px solid black;
+    border: 1px solid black;
     margin-right: -2px;
     background-color: #ccb3ff;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     border-radius: 10px 10px 0 0;
     font-family: 'Alatsi', san-serif;
     font-size: 20px;
@@ -51,10 +58,11 @@
     color: white;
     background-color: black;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .tab-titles button:focus {
-    border-bottom: 2px solid #ccb3ff;
+    border-bottom: 1px solid #ccb3ff;
     outline: none;
 }
 
@@ -62,8 +70,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
-    margin-top: -2px;
+    border: 1px solid black;
+    margin-top: -1px;
     background-color: #ccb3ff;
     width: 600px;
     height: 100px;
