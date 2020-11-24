@@ -1,3 +1,5 @@
+/* clock */
+
 .clock {
     display: flex;
     flex-direction: column;
@@ -20,4 +22,52 @@
 
 .clock p {
     margin: 0 15px 0 15px;
+}
+
+/* tabs */
+
+.tabs {
+    margin: 0 auto 0 auto;
+}
+
+.tab-titles {
+    display: table;
+    table-layout: fixed;
+}
+
+.tab-titles button {
+    display: table-cell;
+    border: 2px solid black;
+    margin-right: -2px;
+    background-color: #ccb3ff;
+    border-bottom: 2px solid black;
+    border-radius: 10px 10px 0 0;
+    font-family: 'Alatsi', san-serif;
+    font-size: 20px;
+    padding: 5px 20px 0 20px;
+}
+
+.tab-titles button:hover {
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
+
+.tab-titles button:focus {
+    border-bottom: 2px solid #ccb3ff;
+    outline: none;
+}
+
+.tab-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    margin-top: -2px;
+    background-color: #ccb3ff;
+    width: 600px;
+    height: 100px;
+    font-family: 'Alatsi', san-serif;
+    font-size: 20px;
+    color: white;
 }

@@ -12,11 +12,12 @@ class Tabs extends React.Component {
     }
 
     selectTab(e) {
-        e.preventDefault();
         const body = this.state.selectedTab
 
         const titles = this.props.arrayOfTabs.map( ele => ele.title )
         const selectedTab = titles.indexOf(e.currentTarget.value)
+        const $selectedTab = $(e.currentTarget)
+        $selectedTab.addClass
         this.setState({ selectedTab });
     }
 
@@ -32,12 +33,14 @@ class Tabs extends React.Component {
 
         return (
             <div>
-                <h1>SOME TABS</h1>
-                <div className="tab-titles">
-                    {titles}
-                </div>
-                <div className="tab-body">
-                    {body}
+                <div class="tabs">
+                    <h1>SOME TABS</h1>
+                    <div className="tab-titles">
+                        {titles}
+                    </div>
+                    <div className="tab-body">
+                        {body}
+                    </div>
                 </div>
             </div>
         );
