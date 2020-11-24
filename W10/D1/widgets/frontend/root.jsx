@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs'
+import Weather from './weather'
 
 const tabs = [
     {title: 'one', content: 'I am the first'},
@@ -12,6 +13,7 @@ const Root = (props) => (
     <div>
         <Clock />
         <Tabs arrayOfTabs={tabs}/>
+        <Weather />
     </div>
 
 );

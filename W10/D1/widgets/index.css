@@ -33,7 +33,7 @@
 
 .tabs {
     width: 600px;
-    height: 600px;
+    height: auto;
     margin: 0 auto 0 auto;
 }
 
@@ -74,7 +74,7 @@
     margin-top: -1px;
     background-color: #ccb3ff;
     width: 600px;
-    height: 100px;
+    height: 250px;
     font-family: 'Alatsi', san-serif;
     font-size: 20px;
     color: white;

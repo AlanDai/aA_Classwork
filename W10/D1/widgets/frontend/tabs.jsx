@@ -24,15 +24,15 @@ class Tabs extends React.Component {
 
         let titles = this.props.arrayOfTabs.map( el => el.title )    
         titles = titles.map( (title, idx) => (
-            <button onClick={this.selectTab} value={title}>{title}</button>
+            <button onClick={this.selectTab} value={title} key={idx}>{title}</button>
         ));
 
         const body = this.props.arrayOfTabs[selectedTab].content;
 
         return (
             <div>
-                <h1 class="title">SOME TABS</h1>
-                <div class="tabs">
+                <h1 className="title">SOME TABS</h1>
+                <div className="tabs">
                     <div className="tab-titles">
                         {titles}
                     </div>
@@ -44,4 +44,5 @@ class Tabs extends React.Component {
         );
     }
 }
+
 export default Tabs
