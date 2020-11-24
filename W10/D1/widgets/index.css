@@ -1,0 +1,23 @@
+.clock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    width: 600px;
+    height: 100px;
+    border: 1px solid black;
+    font-family: 'Alatsi', sans-serif;
+    font-size: 40px;
+    color: white;
+    background-color: #3377ff;
+}
+
+.clock > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clock p {
+    margin: 0 15px 0 15px;
+}
