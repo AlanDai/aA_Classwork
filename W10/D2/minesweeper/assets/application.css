@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body p {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.tile {
+    background-color: lightgray;
+    width: 23px;
+    height: 20px;
+    border-width: 2px;
+    text-align: center;
+}
+
+.explored {
+    border-style: inset;
+    /* background-color: lightgray; */
+}
+
+.unexplored {
+    border-style: outset;
+    /* background-color: indigo; */
+}
+
+.tile-row {
+    display: flex;
+}
+
+.flagged {
+    color: red;
+}
+
+.bombed {
+    color: red;
+}
+
+.restart-btn {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.modal-content {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    padding: 55px;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content > * {
+    margin: 10px;
+}
+
+.modal-screen {
+    position: fixed;
+    /* width: 100%; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0, 0.8);
+    z-index: 2;
+}
