@@ -1,4 +1,4 @@
-class Pokemon < ApplicationRecord
+ class Pokemon < ApplicationRecord
   TYPES = [
     'fire',
     'electric',
