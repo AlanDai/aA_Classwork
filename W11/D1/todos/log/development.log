@@ -1,0 +1,306 @@
+  [1m[35m (397.9ms)[0m  [1m[35mCREATE DATABASE "todos_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (100.3ms)[0m  [1m[35mCREATE DATABASE "todos_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (20.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5286629289131009610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTodos (20201130230353)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (28.9ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "title" character varying NOT NULL, "body" character varying, "done" boolean NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20201130230353_create_todos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (13.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201130230353"]]
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (7.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-30 23:04:54.931576"], ["updated_at", "2020-11-30 23:04:54.931576"]]
+  ↳ bin/rails:9
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5286629289131009610)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (14.0ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "brush teeth"], ["body", "toothpaste on the brush, not behind it"], ["done", false], ["created_at", "2020-11-30 23:06:32.682405"], ["updated_at", "2020-11-30 23:06:32.682405"]]
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Load (0.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "buy cat"], ["body", "bigger cats are better"], ["done", false], ["created_at", "2020-11-30 23:33:51.144792"], ["updated_at", "2020-11-30 23:33:51.144792"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "seed that thunky thunk"], ["body", "contact thunk daddy"], ["done", true], ["created_at", "2020-11-30 23:33:51.160171"], ["updated_at", "2020-11-30 23:33:51.160171"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "wait for mike to pop in"], ["body", "he needs to help me"], ["done", false], ["created_at", "2020-11-30 23:33:51.162809"], ["updated_at", "2020-11-30 23:33:51.162809"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "learn to interact with real humans again"], ["body", "pandemic social awkwardness is real"], ["done", false], ["created_at", "2020-11-30 23:33:51.165231"], ["updated_at", "2020-11-30 23:33:51.165231"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "fill out seed db"], ["body", "boring stuff"], ["done", true], ["created_at", "2020-11-30 23:33:51.167449"], ["updated_at", "2020-11-30 23:33:51.167449"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mTodo Create (0.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "sell Alan my cat"], ["body", "I am not a fan of cats"], ["done", false], ["created_at", "2020-11-30 23:33:51.169518"], ["updated_at", "2020-11-30 23:33:51.169518"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "take a nap"], ["body", "I am tired"], ["done", false], ["created_at", "2020-11-30 23:33:51.171360"], ["updated_at", "2020-11-30 23:33:51.171360"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "hit the lottery"], ["body", "working sucks"], ["done", false], ["created_at", "2020-11-30 23:33:51.173365"], ["updated_at", "2020-11-30 23:33:51.173365"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "body", "done", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Create last seed"], ["body", "it's hard to think of seeds"], ["done", true], ["created_at", "2020-11-30 23:33:51.175537"], ["updated_at", "2020-11-30 23:33:51.175537"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[36mTodo Load (0.6ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+Started GET "/" for ::1 at 2020-11-30 15:34:43 -0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/alan/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 1331ms (Views: 1308.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 15:35:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2020-11-30 15:35:56 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 37ms (Views: 20.0ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-11-30 15:36:44 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 15:38:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 127ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 15:38:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2020-11-30 15:38:12 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-11-30 15:38:15 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:23:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 787ms (Views: 762.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:23:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 189ms (Views: 184.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:31:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:31:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:32:10 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:32:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 44ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:32:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:32:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:32:37 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:32:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:34:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 397ms (Views: 392.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-11-30 16:34:33 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (1.7ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 47ms (Views: 10.0ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:34:42 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 66ms (Views: 61.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-11-30 16:35:11 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/todos" for ::1 at 2020-11-30 16:35:15 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:35:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 91ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:37:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/todos" for 127.0.0.1 at 2020-11-30 16:37:43 -0800
+Processing by Api::TodosController#index as JSON
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/api/todos_controller.rb:5
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:43:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 743ms (Views: 738.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:44:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 79ms (Views: 74.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-11-30 16:44:15 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 547ms (Views: 543.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-11-30 16:44:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
